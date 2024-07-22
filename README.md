@@ -1,3 +1,1 @@
-new connection
-the file can be coverted
-jdhhgsadgsughghjsdgsdjggdg
+new testing for jenkins autamations
