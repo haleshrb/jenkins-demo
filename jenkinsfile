@@ -1,18 +1,11 @@
 pipeline {
-    environment {
-        registry = 'jenkins-demo/ml_model'
-        dockerImage = ''
-    }
     agent any
+    
     stages {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Build Docker image
-                    dockerImage = docker.build("${registry}:${BUILD_NUMBER}")
-                    
-                    // Optionally, you can tag the image with a 'latest' tag
-                    dockerImage.tag("${registry}:latest")
+                    docker.build("jenkins-demo/ml_model:4")
                 }
             }
         }
